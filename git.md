@@ -26,6 +26,8 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 ```
 
+告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://git.keeer.net/user/settings/keys)你的SSH公钥。
+
 ### 3. 配置GPG
 我们推荐使用4096位密钥。
 
@@ -52,6 +54,8 @@ sec   rsa4096/0E76AD10B3B7C66F 2019-05-29 [SC] // 注意0E76AD10B3B7C66F
 uid                 [ultimate] Alan-Liang (Alan Liang) <a@keeer.net>
 ssb   rsa4096/EF93B4028712D401 2019-05-29 [E]
 ```
+
+告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://git.keeer.net/user/settings/keys)你的GPG公钥。
 
 ## 测试Git
 ### 基本操作
@@ -80,3 +84,8 @@ git checkout master
 git clone git@github.com:KEEER/guides.git
 cd guides
 ```
+
+## Commit规范
+## Merge
+## ...
+TODO
