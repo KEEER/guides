@@ -1,9 +1,6 @@
 KEEER Git Guide
 ===============
 
-## WSL是什么？
-TODO
-
 ## 安装WSL
 参考[这篇文章](https://zhuanlan.zhihu.com/p/34885182)。本教程中所有操作均在Debian下进行，也可使用Ubuntu。
 
@@ -86,6 +83,45 @@ cd guides
 ```
 
 ## Commit规范
+请见[Commit message 和 Change log 编写指南 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html)
+
+## 分支命名规范
+请使用`feat-foo`或`dev-alan-liang`形式命名Branch，其中foo为功能名，alan-liang为你的名字。
+
+### 常用分支
+- master: 主分支。在一个成熟的产品里，master分支表示稳定版，而没有开发完的产品里表示当前开发进度。
+- dev: 开发分支。若master表示稳定版，则dev表示当前开发进度。
+
 ## Merge
-## ...
-TODO
+在一个功能开发完毕之后需要merge到master分支里。具体操作如下。这个repo已经[上传到KEEER Git](https://git.keeer.net/KEEER/git-test)。请自行创建repo并修改远程地址。
+
+```
+mkdir git-test
+cd git-test
+git init
+echo "Test repo for Git" > README.md
+git add README.md
+git commit -m "Initial Commit"
+git remote add origin git@git.keeer.net:KEEER/git-test.git
+git push --set-upstream origin master
+git branch feat-foo
+git checkout feat-foo
+echo "Feature" > foo.txt
+git add foo.txt
+git commit -m "feat(foo): initialize feature foo"
+echo "Finished" >> foo.txt
+git add foo.txt
+git commit -m "feat(foo): finalize feature foo"
+git push --set-upstream origin feat-foo
+git checkout master
+git merge --squash feat-foo
+git commit -m "feat(foo): add feature foo"
+git push
+```
+
+注意：这里使用了Squash merge。具体细节请参见[这篇文章](https://www.jianshu.com/p/58a166f24c81)。
+
+## Meta
+| Maintainer | Contributor(s) |
+| ---------- | -------------- |
+| Alan-Liang | Alan-Liang     |
