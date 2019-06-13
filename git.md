@@ -121,6 +121,16 @@ git push
 
 注意：这里使用了Squash merge。具体细节请参见[这篇文章](https://www.jianshu.com/p/58a166f24c81)。
 
+## Git常用操作
+| Command        | 用途           | 示例                           |
+| -------------- | ------------ | ---------------------------- |
+| `git add`      | 添加文件到暂存区     | `git add -A`                 |
+| `git commit`   | 添加提交         | `git commit -m "fix: fix #1"`|
+| `git push`     | 推送提交到服务器     | `git push -u origin master`  |
+| `git branch`   | 添加分支(Branch) | `git branch feat-foo`        |
+| `git checkout` | 切换分支         | `git ckeckout master`        |
+| `git merge`    | 合并分支         | `git merge feat-foo`         |
+
 ## Meta
 | Maintainer | Contributor(s) |
 | ---------- | -------------- |
