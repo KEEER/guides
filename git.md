@@ -23,7 +23,7 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/id_rsa
 ```
 
-告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://git.keeer.net/user/settings/keys)你的SSH公钥。
+告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://webgit.keeer.net/user/settings/keys)你的SSH公钥。
 
 ### 3. 配置GPG
 我们推荐使用4096位密钥。
@@ -52,7 +52,7 @@ uid                 [ultimate] Alan-Liang (Alan Liang) <a@keeer.net>
 ssb   rsa4096/EF93B4028712D401 2019-05-29 [E]
 ```
 
-告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://git.keeer.net/user/settings/keys)你的GPG公钥。
+告诉[GitHub](https://github.com/settings/keys)和[KEEER Git](https://webgit.keeer.net/user/settings/keys)你的GPG公钥。
 
 ## 测试Git
 ### 基本操作
@@ -93,7 +93,7 @@ cd guides
 - dev: 开发分支。若master表示稳定版，则dev表示当前开发进度。
 
 ## Merge
-在一个功能开发完毕之后需要merge到master分支里。具体操作如下。这个repo已经[上传到KEEER Git](https://git.keeer.net/KEEER/git-test)。请自行创建repo并修改远程地址。
+在一个功能开发完毕之后需要merge到master分支里。具体操作如下。这个repo已经[上传到KEEER Git](https://webgit.keeer.net/KEEER/git-test)。请自行创建repo并修改远程地址。
 
 ```
 mkdir git-test
